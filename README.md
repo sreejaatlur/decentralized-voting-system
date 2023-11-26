@@ -22,11 +22,11 @@
 
 ## Screenshots
 
-![Login Page](https://github.com/sreejaatlur/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/login%20ss.png)
+![Login Page](https://github.com/sreejaatlur/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/loginss.png)
 
-![Admin Page](https://github.com/sreejaatlur/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/admin%20ss.png)
+![Admin Page](https://github.com/sreejaatlur/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/adminss.png)
 
-![Voter Page](https://github.com/sreejaatlur/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/index%20ss.png)
+![Voter Page](https://github.com/sreejaatlur/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/indexss.png)
 
 ## Installation
 
