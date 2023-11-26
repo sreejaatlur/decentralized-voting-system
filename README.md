@@ -2,7 +2,7 @@
 
 #### The utilization of Ethereum Blockchain in the Decentralized Voting System establishes a secure and transparent framework for executing elections. Harnessing the capabilities of Ethereum's blockchain technology, this system guarantees the immutability of voting records, allowing users to remotely cast their votes with anonymity and fraud prevention. Delve into this groundbreaking project to experience a reliable and decentralized approach to voting processes.
 
-#### For a cool demo of this project watch this [YouTube video](https://www.youtube.com/watch?v=a5CJ70D2P-E).
+#### For a cool demo of this project watch this [YouTube video](https://www.youtube.com/watch?v=6s_BY-M3IGY&ab_channel=ManideepMeda).
 
 ## Features
 
@@ -93,4 +93,4 @@
         cd Database_API
 
 You're all set! The Voting app should be up and running now at http://localhost:8080/.<br>
-For more info about usage checkout [YouTube video](https://www.youtube.com/watch?v=a5CJ70D2P-E).
+For more info about usage checkout [YouTube video](https://www.youtube.com/watch?v=6s_BY-M3IGY&ab_channel=ManideepMeda).
