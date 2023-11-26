@@ -1,18 +1,16 @@
 # decentralized-voting-system
 
-#### The Decentralized Voting System using Ethereum Blockchain is a secure and transparent solution for conducting elections. Leveraging Ethereum's blockchain technology, this system ensures tamper-proof voting records, enabling users to cast their votes remotely while maintaining anonymity and preventing fraud. Explore this innovative project for trustworthy and decentralized voting processes.
+#### The utilization of Ethereum Blockchain in the Decentralized Voting System establishes a secure and transparent framework for executing elections. Harnessing the capabilities of Ethereum's blockchain technology, this system guarantees the immutability of voting records, allowing users to remotely cast their votes with anonymity and fraud prevention. Delve into this groundbreaking project to experience a reliable and decentralized approach to voting processes.
 
 #### For a cool demo of this project watch this [YouTube video](https://www.youtube.com/watch?v=a5CJ70D2P-E).
 
-#### For more details checkout [Project Report](https://github.com/sreejaatlur/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/Project%20Report%20github.pdf).
-
 ## Features
 
-- Implements JWT for secure voter authentication and authorization.
-- Utilizes Ethereum blockchain for tamper-proof and transparent voting records.
-- Removes the need for intermediaries, ensuring a trustless voting process.
-- Admin panel to manage candidates, set voting dates, and monitor results.
-- Intuitive UI for voters to cast votes and view candidate information.
+- Implements JWT for robust voter authentication and authorization, enhancing security measures.
+- Integrates the Ethereum blockchain to guarantee the integrity and transparency of voting records, creating an immutable and verifiable ledger.
+- Eliminates the necessity for intermediaries, establishing a trustless voting system with enhanced reliability.
+- Implements an administrative dashboard for candidate management, voting schedule configuration, and real-time result monitoring.
+- Offers an user-friendly interface for voters, facilitating seamless casting of votes and accessing comprehensive information about candidates.
 
 ## Requirements
 
@@ -40,41 +38,29 @@
 
 3.  Download and install [Ganache](https://trufflesuite.com/ganache/).
 
-4.  Create a workspace named <b>developement</b>, in the truffle projects section add `truffle-config.js` by clicking `ADD PROJECT` button.
+4.  Create a workspace in the truffle projects section and in a new terminal migrate the truffle contract to local blockchain.
 
-5.  Download [Metamask](https://metamask.io/download/) extension for the browser.
+             truffle migrate --reset
 
-6.  Now create wallet (if you don't have one), then import accounts from ganache.
+6.  Download [Metamask](https://metamask.io/download/) extension for the browser.
 
-7.  Add network to the metamask. ( Network name - Localhost 7575, RPC URl - http://localhost:7545, Chain ID - 1337, Currency symbol - ETH)
+7.  Now create wallet (if you don't have one), then import accounts from ganache.
 
-8.  Open MySQL and create database named <b>voter_db</b>.
+8.  Add network to the metamask. ( Network name - Localhost 7575, RPC URl - http://localhost:7545, Chain ID - 1337, Currency symbol - ETH)
 
-9.  In the database created, create new table named <b>voters</b> in the given format and add some values.
+9.  Open MySQL and create database named <b>voter_db</b>.
 
-            CREATE TABLE voters (
-            voter_id VARCHAR(36) PRIMARY KEY NOT NULL,
-            role ENUM('admin', 'user') NOT NULL,
-            password VARCHAR(255) NOT NULL
-            );
+10.  In the database created, create new table with voter_id, role and password columns.
 
-    <br>
-
-         +--------------------------------------+-------+-----------+
-         | voter_id                             | role  | password  |
-         +--------------------------------------+-------+-----------+
-         |                                      |       |           |
-         +--------------------------------------+-------+-----------+
-
-10. Install truffle globally
+11. Install truffle globally
 
         npm install -g truffle
 
-11. Go to the root directory of repo and install node modules
+12. Go to the root directory of repo and install node modules
 
         npm install
 
-12. Install python dependencies
+13. Install python dependencies
 
         pip install fastapi mysql-connector-python pydantic python-dotenv uvicorn uvicorn[standard] PyJWT
 
@@ -102,58 +88,9 @@
 
         node index.js
 
-6.  Navigate to `Database_API` folder in another terminal
+6.  Navigate to `Database_API` folder in another terminal and start the server
 
         cd Database_API
 
-    then start the database server by following command
-
-        uvicorn main:app --reload --host 127.0.0.1
-
-7.  In a new terminal migrate the truffle contract to local blockchain
-
-        truffle migrate
-
 You're all set! The Voting app should be up and running now at http://localhost:8080/.<br>
 For more info about usage checkout [YouTube video](https://www.youtube.com/watch?v=a5CJ70D2P-E).
-
-## Code Structure
-
-    ├── blockchain-voting-dapp            # Root directory of the project.
-        ├── build                         # Directory containing compiled contract artifacts.
-        |   └── contracts
-        |       ├── Migrations.json
-        |       └── Voting.json
-        ├── contracts                     # Directory containing smart contract source code.
-        |   ├── 2_deploy_contracts.js
-        |   ├── Migrations.sol
-        |   └── Voting.sol
-        ├── Database_API                  # API code for database communication.
-        |   └── main.py
-        ├── migrations                    # Ethereum contract deployment scripts.
-        |   └── 1_initial_migration.js
-        ├── node_modules                  # Node.js modules and dependencies.
-        ├── public                        # Public assets like favicon.
-        |   └── favicon.ico
-        ├── src
-        |   ├── assets                    # Project images.
-        |   |   └── eth5.jpg
-        |   ├── css                       # CSS stylesheets.
-        |   |   ├── admin.css
-        |   |   ├── index.css
-        |   |   └── login.css
-        |   ├── dist                      # Compiled JavaScript bundles.
-        |   |   ├── app.bundle.js
-        |   |   └── login.bundle.js
-        |   ├── html                      # HTML templates.
-        |   |   ├── admin.html
-        |   |   ├── index.html
-        |   |   └── login.html
-        |   └── js                        # JavaScript logic files.
-        |       ├── app.js
-        |       └── login.js
-        ├── index.js                      # Main entry point for Node.js application.
-        ├── package.json                  # Node.js package configuration.
-        ├── package-lock.json             # Lockfile for package dependencies.
-        ├── README.md                     # Project documentation.
-        └── truffle-config.js                    # Truffle configuration file.
